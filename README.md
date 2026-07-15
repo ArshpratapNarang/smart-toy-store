@@ -108,5 +108,3 @@ The project focuses on creating a responsive and user-friendly shopping interfac
 
 ---
 
-# Project Structure
-
