@@ -1,11 +1,11 @@
-# 🧸 Smart Toy Store Web Application
+# Smart Toy Store Web Application
 
 A modern and interactive e-commerce toy store website built using **HTML, CSS, and JavaScript**.  
 The project simulates a real-world toy shopping platform inspired by premium toy retailers like Hamleys, featuring product browsing, category filtering, cart management, user authentication, and checkout experience.
 
 ---
 
-# 📌 Project Overview
+# Project Overview
 
 Smart Toy Store is a frontend-based e-commerce application designed to provide customers with a smooth online toy shopping experience.
 
@@ -24,9 +24,9 @@ The project focuses on creating a responsive and user-friendly shopping interfac
 
 ---
 
-# ✨ Features
+# Features
 
-## 🛍️ Product Management
+## Product Management
 
 - 50+ toy products
 - Multiple categories:
@@ -50,7 +50,7 @@ The project focuses on creating a responsive and user-friendly shopping interfac
 - Price range filtering
 
 
-## 🛒 Shopping Cart
+## Shopping Cart
 
 - Add products to cart
 - Increase/decrease quantity
@@ -59,7 +59,7 @@ The project focuses on creating a responsive and user-friendly shopping interfac
 - Cart persistence using Local Storage
 
 
-## 🔐 Authentication System
+## Authentication System
 
 - User signup
 - User login
@@ -67,7 +67,7 @@ The project focuses on creating a responsive and user-friendly shopping interfac
 - Local Storage based user session management
 
 
-## 💳 Checkout System
+## Checkout System
 
 - Checkout interface
 - Customer details form
@@ -88,7 +88,7 @@ The project focuses on creating a responsive and user-friendly shopping interfac
 
 ---
 
-# 🛠️ Technologies Used
+# Technologies Used
 
 ## Frontend
 
@@ -108,5 +108,5 @@ The project focuses on creating a responsive and user-friendly shopping interfac
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
