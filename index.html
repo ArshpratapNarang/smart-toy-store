@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ToyVerse | Premium Toy Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🧸 ToyVerse
+    </div>
+
+
+    <div class="search-box">
+        <input 
+        type="text"
+        id="searchInput"
+        placeholder="Search toys, brands and categories..."
+        >
+    </div>
+
+
+    <div class="nav-actions">
+
+        <button id="loginOpen">
+            Login
+        </button>
+
+        <button id="signupOpen">
+            Signup
+        </button>
+
+
+        <button class="cart-button" onclick="toggleCart()">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Bring Home The Magic Of Play
+</h1>
+
+<p>
+Premium toys for kids of every age
+</p>
+
+
+<button onclick="shopNow()">
+Shop Now
+</button>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+
+<section class="category-section">
+
+<h2>
+Shop By Category
+</h2>
+
+
+<div class="categories">
+
+<button onclick="filterCategory('all')">
+All Toys
+</button>
+
+
+<button onclick="filterCategory('cars')">
+🚗 Cars
+</button>
+
+
+<button onclick="filterCategory('dolls')">
+🧸 Dolls
+</button>
+
+
+<button onclick="filterCategory('lego')">
+🧱 Building Toys
+</button>
+
+
+<button onclick="filterCategory('games')">
+🎲 Games
+</button>
+
+
+<button onclick="filterCategory('education')">
+📚 Educational
+</button>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= FILTERS ================= -->
+
+<section class="filter-section">
+
+
+<select id="categoryFilter">
+
+<option value="all">
+All Categories
+</option>
+
+<option value="cars">
+Cars
+</option>
+
+<option value="dolls">
+Dolls
+</option>
+
+<option value="lego">
+Building Toys
+</option>
+
+<option value="games">
+Games
+</option>
+
+<option value="education">
+Educational
+</option>
+
+</select>
+
+
+
+
+<div class="price-filter">
+
+<label>
+Maximum Price:
+₹<span id="priceValue">
+10000
+</span>
+
+</label>
+
+
+<input 
+type="range"
+id="priceRange"
+min="100"
+max="10000"
+value="10000"
+>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+
+<section id="products"
+class="products-grid">
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= CART ================= -->
+
+
+<div id="overlay"
+onclick="closeCart()">
+
+</div>
+
+
+
+<aside id="cartPanel"
+class="cart-panel">
+
+
+<div class="cart-header">
+
+<h2>
+Your Cart
+</h2>
+
+
+<button onclick="closeCart()">
+✖
+</button>
+
+</div>
+
+
+
+<div id="cartItems">
+
+</div>
+
+
+
+<div class="cart-bottom">
+
+<h3>
+Total:
+₹<span id="cartTotal">
+0
+</span>
+
+</h3>
+
+
+<button 
+class="checkout-btn"
+onclick="openCheckout()">
+
+Proceed To Checkout
+
+</button>
+
+
+</div>
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- ================= CHECKOUT ================= -->
+
+
+<div id="checkoutModal"
+class="modal">
+
+
+<div class="modal-box checkout-box">
+
+
+<h2>
+Secure Checkout
+</h2>
+
+
+
+<input 
+placeholder="Full Name"
+>
+
+
+<input
+placeholder="Mobile Number"
+>
+
+
+<input
+placeholder="Address"
+>
+
+
+
+
+<h3>
+Payment Method
+</h3>
+
+
+<div class="payment-options">
+
+
+<button>
+UPI
+</button>
+
+
+<button>
+Credit Card
+</button>
+
+
+<button>
+Debit Card
+</button>
+
+
+<button>
+COD
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="pay-button"
+onclick="placeOrder()">
+
+Pay Now
+
+</button>
+
+
+
+<button 
+class="cancel-button"
+onclick="closeCheckout()">
+
+Cancel
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= LOGIN ================= -->
+
+
+<div id="loginModal"
+class="modal">
+
+
+<div class="modal-box">
+
+
+<h2>
+Login
+</h2>
+
+
+<input
+id="loginEmail"
+placeholder="Email"
+>
+
+
+<input
+id="loginPassword"
+type="password"
+placeholder="Password"
+>
+
+
+<button onclick="loginUser()">
+
+Login
+
+</button>
+
+
+
+<button class="close-modal">
+
+Close
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= SIGNUP ================= -->
+
+
+<div id="signupModal"
+class="modal">
+
+
+<div class="modal-box">
+
+
+<h2>
+Create Account
+</h2>
+
+
+<input
+id="signupEmail"
+placeholder="Email"
+>
+
+
+<input
+id="signupPassword"
+type="password"
+placeholder="Password"
+>
+
+
+<button onclick="signupUser()">
+
+Create Account
+
+</button>
+
+
+
+<button class="close-modal">
+
+Close
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= TOAST ================= -->
+
+
+<div id="toast">
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
